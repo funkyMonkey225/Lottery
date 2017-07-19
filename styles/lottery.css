@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  background: yellow;
+  background-color: #3113FF;
 }
 
 *, *:before, *:after {
@@ -19,6 +19,7 @@ html {
 
 .title {
     text-align: center;
+    color: #B3BCBF;
 }
 
 .form {
@@ -59,6 +60,25 @@ a.button {
 
 .red {
     background-color: red;
+}
+.bounce {
+    animation: bounce 3s;
+}
+
+@keyframes bounce {
+    0% {transform:translateY(-1000px); opacity:0;}
+    5% {transform:translateY(-1000px); opacity:0;}
+    15% {transform:translateY(0); padding-bottom: 5px;}
+    30% {transform:translateY(-50%);}
+    40% {transform:translateY(0%); padding-bottom: 6px;}
+    50% {transform:translateY(-30%);}
+    70% {transform:translateY(0%); padding-bottom: 7px;}
+    80% {transform:translateY(-15%);}
+    90% {transform:translateY(0%); padding-bottom: 8px;}
+    95% {transform:translateY(-7%);}
+    97% {transform:translateY(0%); padding-bottom: 9px;}
+    99% {transform:translateY(-3%);}
+    100% {transform:translateY(0); padding-bottom: 9px; opacity: 1;}
 }
 
 @media screen and (min-width: 768px) {

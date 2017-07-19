@@ -42,23 +42,25 @@ function generateNumsArray() {
 }
 
 function addFinalNumber() {
-   generatedArray.push(to26());
-   return generatedArray;
+    var finalNumber = to26();
+    var last = document.createElement('div');
+    last.textContent = finalNumber;
+    last.setAttribute('class', 'powerball red bounce');
+    last.setAttribute('data-role', 'numbers');
+    displayDiv.appendChild(last);
 }
 
 
-// function removePriorArray() {
-//     var displayNodes = document.querySelectorAll('[data-role="numbers"]');
-//     if (displayNodes) {
-//         displayDiv.removeChild(displayNodes);
-//     }
-// }
-
 function printToScreen() {
+    var displayNodes = document.querySelector('[data-role="numbers"]');
+    if (displayNodes) {
+        diplayNodes = document.querySelectorAll('[data-role="numbers"]')
+        displayDiv.removeChild(displayNodes);
+    }
     generatedArray.forEach(function(num, i) {
         var luckyNumbers = document.createElement('div');
         luckyNumbers.textContent = generatedArray[i];
-        luckyNumbers.setAttribute('class', 'powerball');
+        luckyNumbers.setAttribute('class', 'powerball bounce');
         luckyNumbers.setAttribute('data-role', 'numbers');
         displayDiv.appendChild(luckyNumbers);
     });
@@ -68,8 +70,8 @@ function addListener(element) {
     element.addEventListener("click", function(event) {
         event.preventDefault();
         generateNumsArray();
-        addFinalNumber();
         printToScreen();
+        addFinalNumber();
     })
 }
 
