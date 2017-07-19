@@ -47,17 +47,21 @@ function addFinalNumber() {
 }
 
 
+// function removePriorArray() {
+//     var displayNodes = document.querySelectorAll('[data-role="numbers"]');
+//     if (displayNodes) {
+//         displayDiv.removeChild(displayNodes);
+//     }
+// }
+
 function printToScreen() {
-    var luckyNumbers;
-    var displayNodes = document.querySelector('[data-role="numbers"]');
-    if (displayNodes) {
-        displayDiv.removeChild(displayNodes);
-    }
-    luckyNumbers = document.createElement('h2');
-    luckyNumbers.textContent = generatedArray.join(' ');
-    luckyNumbers.setAttribute('class', 'numbers');
-    luckyNumbers.setAttribute('data-role', 'numbers');
-    displayDiv.appendChild(luckyNumbers);
+    generatedArray.forEach(function(num, i) {
+        var luckyNumbers = document.createElement('div');
+        luckyNumbers.textContent = generatedArray[i];
+        luckyNumbers.setAttribute('class', 'powerball');
+        luckyNumbers.setAttribute('data-role', 'numbers');
+        displayDiv.appendChild(luckyNumbers);
+    });
 }
 
 function addListener(element) {
@@ -66,7 +70,6 @@ function addListener(element) {
         generateNumsArray();
         addFinalNumber();
         printToScreen();
-        console.log(generatedArray);
     })
 }
 

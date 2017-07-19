@@ -31,10 +31,6 @@ html {
     justify-content: center;
 }
 
-.numbers {
-    text-align: center;
-}
-
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -55,6 +51,7 @@ a.button {
     border-radius: 100%;
     margin-top: 1.5rem;
     margin-right: .75rem;
+    text-align: center;
 }
 
 .red {
