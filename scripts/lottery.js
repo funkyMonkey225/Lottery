@@ -2,7 +2,7 @@ var DISPLAY_SELECTOR = '[data-role="display"]';
 var GENERATOR_SELECTOR = '[data-role="generator"]';
 var generator = document.querySelector(GENERATOR_SELECTOR);
 var displayDiv = document.querySelector(DISPLAY_SELECTOR);
-var generatedArray = [];
+var tempArray = [];
 
 function range(min, max) {
   var arr = [];
@@ -25,8 +25,9 @@ function randomNums(num) {
     var number = to69();
     var cont = true;
     while (cont === true) {
-        if (!(number in generatedArray)) {
+        if (tempArray.indexOf(number) === -1) {
             cont = false;
+            tempArray.push(number);
             return number;
         } else {
             number = to69();
@@ -65,6 +66,7 @@ function addListener(element) {
         generateNumsArray();
         addFinalNumber();
         printToScreen();
+        console.log(generatedArray);
     })
 }
 
