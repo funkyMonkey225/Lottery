@@ -49,10 +49,16 @@ a.button {
 }
 
 .powerball {
-    height: 4rem;
-    width: 4rem;
+    height: 4.5rem;
+    width: 4.5rem;
     background-color: white;
     border-radius: 100%;
+    margin-top: 1.5rem;
+    margin-right: .75rem;
+}
+
+.red {
+    background-color: red;
 }
 
 @media screen and (min-width: 768px) {
