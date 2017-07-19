@@ -1,7 +1,7 @@
 var DISPLAY_SELECTOR = '[data-role="display"]';
 var GENERATOR_SELECTOR = '[data-role="generator"]';
-var generator = querySelector(GENERATOR_SELECTOR);
-
+var generator = document.querySelector(GENERATOR_SELECTOR);
+var generatedArray = [];
 
 function range(min, max) {
   var arr = [];
@@ -20,19 +20,36 @@ function randomIntervalCreator(min, max) {
 var to69 = randomIntervalCreator(1, 69);
 var to26 = randomIntervalCreator(1, 26);
 
-function generateNumsArray() {
-    var range1 = range(0, 4);
-    var range1.map();
-    
-    num = Math.floor(Math.random() * 4)
+function randomNums(num) {
+    var number = to69();
+    var cont = true;
+    while (cont === true) {
+        if (!(number in generatedArray)) {
+            cont = false;
+            return number;
+        } else {
+            number = to69();
+        }
+    }
 }
 
+function generateNumsArray() {
+    var range1 = range(0, 5);
+    generatedArray = range1.map(randomNums);
+    return generatedArray;
+}
 
-
+function addFinalNumber() {
+    return generatedArray.push(to26());
+}
 
 function addListener(element) {
     element.addEventListener("click", function(event) {
         event.preventDefault();
-
+        generateNumsArray();
+        addFinalNumber();
+        console.log(generatedArray);
     })
 }
+
+addListener(generator);
