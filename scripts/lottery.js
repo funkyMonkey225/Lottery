@@ -45,9 +45,10 @@ function addFinalNumber() {
    return generatedArray;
 }
 
+
 function printToScreen() {
     var luckyNumbers = document.createElement('h2');
-    luckyNumbers.textContent = generatedArray;
+    luckyNumbers.textContent = generatedArray.join(' ');
     luckyNumbers.setAttribute('class', 'numbers');
     displayDiv.appendChild(luckyNumbers);
 }
