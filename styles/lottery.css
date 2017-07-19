@@ -9,6 +9,15 @@ html {
   box-sizing: inherit;
 }
 
+.title {
+    text-align: center;
+}
+
+.display {
+    height: 80px;
+    width: 100%;
+}
+
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
