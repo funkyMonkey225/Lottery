@@ -13,6 +13,11 @@ html {
     text-align: center;
 }
 
+.form {
+    display: flex;
+    justify-content: center;
+}
+
 .display {
     height: 80px;
     width: 100%;
