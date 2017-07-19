@@ -11,12 +11,15 @@
 <body>
     <div class="title">
         <h1>LotteryApp</h1>
-        <p>Press "Generate!" to generate a random number for the Powerball lottery.</p>
+        <p>Press "Generate!" to generate random numbers for the Powerball lottery.</p>
     </div>
     <div class="display" data-role="display">
 
     </div>
-    <a href="#" data-role="generator" class="button">Generate!</a>
+    <form action="#" method="POST">
+        <input type="number" name="batches" placeholder="How many batches?" data-role="batches" required>
+        <input type="submit" class="button" data-role="generator" value="Generate!">
+    </form>
 
 
     <script src="scripts/lottery.js"></script>
