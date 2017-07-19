@@ -48,6 +48,7 @@ function addFinalNumber() {
 function printToScreen() {
     var luckyNumbers = document.createElement('h2');
     luckyNumbers.textContent = generatedArray;
+    luckyNumbers.setAttribute('class', 'numbers');
     displayDiv.appendChild(luckyNumbers);
 }
 

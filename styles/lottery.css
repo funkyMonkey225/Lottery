@@ -18,6 +18,10 @@ html {
     width: 100%;
 }
 
+.numbers {
+    text-align: center;
+}
+
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
