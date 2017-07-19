@@ -47,9 +47,15 @@ function addFinalNumber() {
 
 
 function printToScreen() {
-    var luckyNumbers = document.createElement('h2');
+    var luckyNumbers;
+    var displayNodes = document.querySelector('[data-role="numbers"]');
+    if (displayNodes) {
+        displayDiv.removeChild(displayNodes);
+    }
+    luckyNumbers = document.createElement('h2');
     luckyNumbers.textContent = generatedArray.join(' ');
     luckyNumbers.setAttribute('class', 'numbers');
+    luckyNumbers.setAttribute('data-role', 'numbers');
     displayDiv.appendChild(luckyNumbers);
 }
 
