@@ -11,9 +11,14 @@ function range(min, max) {
   return arr;
 }
 
-function randomNums(num) {
-    
+function randomIntervalCreator(min, max) {
+    return function() {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
 }
+
+var to69 = randomIntervalCreator(1, 69);
+var to26 = randomIntervalCreator(1, 26);
 
 function generateNumsArray() {
     var range1 = range(0, 4);
