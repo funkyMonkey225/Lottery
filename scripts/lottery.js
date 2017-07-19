@@ -1,6 +1,7 @@
 var DISPLAY_SELECTOR = '[data-role="display"]';
 var GENERATOR_SELECTOR = '[data-role="generator"]';
 var generator = document.querySelector(GENERATOR_SELECTOR);
+var displayDiv = document.querySelector(DISPLAY_SELECTOR);
 var generatedArray = [];
 
 function range(min, max) {
@@ -40,7 +41,14 @@ function generateNumsArray() {
 }
 
 function addFinalNumber() {
-    return generatedArray.push(to26());
+   generatedArray.push(to26());
+   return generatedArray;
+}
+
+function printToScreen() {
+    var luckyNumbers = document.createElement('h2');
+    luckyNumbers.textContent = generatedArray;
+    displayDiv.appendChild(luckyNumbers);
 }
 
 function addListener(element) {
@@ -48,8 +56,10 @@ function addListener(element) {
         event.preventDefault();
         generateNumsArray();
         addFinalNumber();
-        console.log(generatedArray);
+        printToScreen();
     })
 }
+
+
 
 addListener(generator);
