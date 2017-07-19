@@ -9,6 +9,14 @@ html {
   box-sizing: inherit;
 }
 
+.main-header {
+    background-image: url(../images/Powerball.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
 .title {
     text-align: center;
 }
@@ -19,8 +27,8 @@ html {
 }
 
 .display {
-    height: 80px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .numbers {
@@ -38,4 +46,25 @@ a.button {
     width: 100px;
     padding: 10px;
     margin: 0 auto;
+}
+
+.powerball {
+    height: 4rem;
+    width: 4rem;
+    background-color: white;
+    border-radius: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .main-header {
+        background-image: url(../images/Powerball.jpg);
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main-header {
+        background-image: url(../images/Powerball.jpg);
+        height: 500px;
+    }
 }
