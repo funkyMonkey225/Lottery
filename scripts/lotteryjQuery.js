@@ -62,8 +62,8 @@ function sleep(milliseconds) {
 
 function printToScreen() {
     var $displayNodes = $('[data-role="numbers"]');
-    while ($displayDiv.hasChildNodes()) {
-        $displayDiv.removeChild($displayDiv.lastChild);
+    if ($displayDiv.children()) {
+        $displayDiv.empty();
     }
     generatedArray.forEach(function(num, i) {
         var $luckyNumbers = $('<div></div>', {
