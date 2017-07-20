@@ -3,7 +3,6 @@ var GENERATOR_SELECTOR = '[data-role="generator"]';
 var $generator = $(GENERATOR_SELECTOR);
 var $displayDiv = $(DISPLAY_SELECTOR);
 var tempArray = [];
-var classKeys = {0: "one", 1: "two", 2: "three", 3: "four", 4: "five"}
 
 function range(min, max) {
   var arr = [];
@@ -47,8 +46,7 @@ function addFinalNumber() {
     var $last = $('<div></div>', {
         'text': finalNumber,
         'class': 'powerball red bounce',
-        'data-role': 'numbers',
-        'id': 'six'
+        'data-role': 'numbers'
     });
     setTimeout(function () {
             $displayDiv.append($last);
@@ -64,11 +62,6 @@ function sleep(milliseconds) {
   }
 }
 
-// function addAnimationDelay(counter) {
-//     var delay = counter * 500;
-//     $('.bounce').css('animation-delay', delay + "ms");
-// }
-
 function printToScreen() {
     var $displayNodes = $('[data-role="numbers"]');
     if ($displayDiv.children()) {
@@ -79,7 +72,6 @@ function printToScreen() {
         'text': generatedArray[i],
         'class': 'powerball bounce',
         'data-role': 'numbers',
-        'id': classKeys[i]
     });
         var delay = i * 400;
         setTimeout(function () {
