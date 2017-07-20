@@ -24,15 +24,17 @@ html {
 }
 
 .title {
-    font-size: 5rem;
+    font-size: 3rem;
     text-shadow: 2px 2px 4px #000000;
     margin-bottom: 1rem;
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
     margin-top: .5rem;
     margin-bottom: 3rem;
+    font-weight: 100;
 }
 
 .form {
@@ -77,16 +79,16 @@ html {
 
 .powerball {
     display: flex;
-    height: 3.0rem;
-    width: 3.0rem;
+    height: 2.5rem;
+    width: 2.5rem;
     background-color: white;
     border-radius: 50%;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     margin-right: .27rem;
     margin-left: .27rem;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     box-shadow: inset 5px -3px 25px black;
 }
 
@@ -113,15 +115,40 @@ html {
     100% {transform:translateY(0); padding-bottom: 9px; opacity: 1;}
 }
 
+@media screen and (min-width: 340px) {
+    .powerball {
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    margin-top: 2.5rem;
+    margin-right: .30rem;
+    margin-left: .30rem;
+    font-size: 1.5rem;
+    box-shadow: inset 5px -3px 25px black;
+}
+
 @media screen and (min-width: 600px) {
     .powerball {
         height: 4.5rem;
         width: 4.5rem;
         border-radius: 50%;
-        margin-top: 1.5rem;
-        margin-right: .75rem;
+        margin-top: 3rem;
+        margin-right: .4rem;
+        margin-left: .4rem;
         font-size: 2.25rem;
         box-shadow: inset 5px -3px 25px black;
+    }
+
+    .title {
+    font-size: 5rem;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 1rem;
+    }
+
+    .subtitle {
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    margin-bottom: 3rem;
     }
 }
 
