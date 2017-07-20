@@ -45,7 +45,7 @@ function addFinalNumber() {
     var finalNumber = to26();
     var last = document.createElement('div');
     last.textContent = finalNumber;
-    last.setAttribute('class', 'powerball red bounce');
+    last.setAttribute('class', 'powerball red bounce shadow');
     last.setAttribute('data-role', 'numbers');
     displayDiv.appendChild(last);
 }
@@ -67,7 +67,7 @@ function printToScreen() {
     generatedArray.forEach(function(num, i) {
         var luckyNumbers = document.createElement('div');
         luckyNumbers.textContent = generatedArray[i];
-        luckyNumbers.setAttribute('class', 'powerball bounce');
+        luckyNumbers.setAttribute('class', 'powerball bounce shadow');
         luckyNumbers.setAttribute('data-role', 'numbers');
         displayDiv.appendChild(luckyNumbers);
     });

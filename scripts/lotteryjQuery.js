@@ -3,6 +3,7 @@ var GENERATOR_SELECTOR = '[data-role="generator"]';
 var $generator = $(GENERATOR_SELECTOR);
 var $displayDiv = $(DISPLAY_SELECTOR);
 var tempArray = [];
+var classKeys = {0: "one", 1: "two", 2: "three", 3: "four", 4: "five"}
 
 function range(min, max) {
   var arr = [];
@@ -46,7 +47,8 @@ function addFinalNumber() {
     var $last = $('<div></div>', {
         'text': finalNumber,
         'class': 'powerball red bounce',
-        'data-role': 'numbers'
+        'data-role': 'numbers',
+        'id': 'six'
     });
     $displayDiv.append($last);
 }
@@ -69,7 +71,8 @@ function printToScreen() {
         var $luckyNumbers = $('<div></div>', {
         'text': generatedArray[i],
         'class': 'powerball bounce',
-        'data-role': 'numbers'
+        'data-role': 'numbers',
+        'id': classKeys[i]
         });
         $displayDiv.append($luckyNumbers);
     });
