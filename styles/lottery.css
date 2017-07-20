@@ -90,6 +90,8 @@ html {
     align-items: center;
     font-size: 1.25rem;
     box-shadow: inset 5px -3px 25px black;
+    font-family: 'Fjalla One', sans-serif;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .red {
@@ -125,6 +127,7 @@ html {
     margin-left: .30rem;
     font-size: 1.5rem;
     box-shadow: inset 5px -3px 25px black;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -162,6 +165,6 @@ html {
 @media screen and (min-width: 1000px) {
     .main-header {
         background-image: url(../images/Powerball.jpg);
-        height: 500px;
+        height: 450px;
     }
 }
