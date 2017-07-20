@@ -62,8 +62,6 @@ function sleep(milliseconds) {
 
 function printToScreen() {
     var displayNodes = document.querySelector('[data-role="numbers"]');
-    // if (displayNodes) {
-        // diplayNodes = document.querySelectorAll('[data-role="numbers"]');
     while (displayDiv.hasChildNodes()) {
         displayDiv.removeChild(displayDiv.lastChild);
     }
