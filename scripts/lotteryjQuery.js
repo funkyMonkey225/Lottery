@@ -50,7 +50,9 @@ function addFinalNumber() {
         'data-role': 'numbers',
         'id': 'six'
     });
-    $displayDiv.append($last);
+    setTimeout(function () {
+            $displayDiv.append($last);
+        }, 2000);
 }
 
 function sleep(milliseconds) {
@@ -61,6 +63,11 @@ function sleep(milliseconds) {
     }
   }
 }
+
+// function addAnimationDelay(counter) {
+//     var delay = counter * 500;
+//     $('.bounce').css('animation-delay', delay + "ms");
+// }
 
 function printToScreen() {
     var $displayNodes = $('[data-role="numbers"]');
@@ -73,8 +80,11 @@ function printToScreen() {
         'class': 'powerball bounce',
         'data-role': 'numbers',
         'id': classKeys[i]
-        });
-        $displayDiv.append($luckyNumbers);
+    });
+        var delay = i * 400;
+        setTimeout(function () {
+            $displayDiv.append($luckyNumbers);
+        }, delay);
     });
 }
 
