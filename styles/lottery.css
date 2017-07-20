@@ -19,7 +19,7 @@ html {
 
 .title {
     text-align: center;
-    color: #;
+    color: #FAF688;
 }
 
 .form {
@@ -47,15 +47,16 @@ a.button {
 
 .powerball {
     display: flex;
-    height: 4.5rem;
-    width: 4.5rem;
+    height: 3.0rem;
+    width: 3.0rem;
     background-color: white;
-    border-radius: 100%;
+    border-radius: 50%;
     margin-top: 1.5rem;
-    margin-right: .75rem;
+    margin-right: .30rem;
+    margin-left: .30rem;
     justify-content: center;
     align-items: center;
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     box-shadow: inset 5px -3px 25px black;
 }
 
@@ -63,7 +64,7 @@ a.button {
     background-color: red;
 }
 .bounce {
-    animation: bounce 3s;
+    animation: bounce 2s;
 }
 
 @keyframes bounce {
@@ -82,11 +83,20 @@ a.button {
     100% {transform:translateY(0); padding-bottom: 9px; opacity: 1;}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
     .main-header {
         background-image: url(../images/Powerball.jpg);
         height: 300px;
     }
+    .powerball {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-top: 1.5rem;
+    margin-right: .75rem;
+    font-size: 2.25rem;
+    box-shadow: inset 5px -3px 25px black;
+}
 }
 
 @media screen and (min-width: 1000px) {

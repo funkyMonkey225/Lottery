@@ -50,6 +50,15 @@ function addFinalNumber() {
     displayDiv.appendChild(last);
 }
 
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
 
 function printToScreen() {
     var displayNodes = document.querySelector('[data-role="numbers"]');
@@ -72,6 +81,8 @@ function addListener(element) {
         generateNumsArray();
         printToScreen();
         addFinalNumber();
+        tempArray = [];
+        generatedArray = [];
     })
 }
 
