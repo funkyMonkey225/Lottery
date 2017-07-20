@@ -82,8 +82,8 @@ html {
     background-color: white;
     border-radius: 50%;
     margin-top: 3rem;
-    margin-right: .30rem;
-    margin-left: .30rem;
+    margin-right: .27rem;
+    margin-left: .27rem;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
@@ -130,6 +130,7 @@ html {
         background-image: url(../images/Powerball.jpg);
         height: 300px;
     }
+}
 
 @media screen and (min-width: 1000px) {
     .main-header {
